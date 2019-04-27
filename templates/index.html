@@ -1,0 +1,20 @@
+<!doctype html>
+<title>ACME Image Viewer</title>
+
+<body>
+    <h1>ACME Image Viewer</h1>
+
+    <!-- {% from "_formutil.html" import render_field %} -->
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <dl>
+            {{ form.upload }}
+        </dl>
+        {{ form.submit }}
+        <p>
+            {% for error in form.errors %}
+                <span style="color: red;">ERROR: {{ form.errors[error] }}</span>
+            {% endfor %}
+        </p>
+    </form>
+</body>

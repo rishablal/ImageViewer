@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <title>ACME Image Viewer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background: #0e0e0e;
+        }
+        .img-box {
+            display: grid;
+            height: 100vh;
+            align-items: center;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-box">
+        <img class="center-fit" src="{{ url }}img/{{ image }}">
+    </div>
+</body>
