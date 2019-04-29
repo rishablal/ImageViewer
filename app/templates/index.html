@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+    <title>ACME Image Viewer</title>
+</head>
+
+<body>
+    <h1>ACME Image Viewer</h1>
+
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label>Upload image to view</label>
+        <br>
+        <input type="file" name="img_input">
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+
+    <p>
+        {% for error in errors %}
+            <span style="color: red;">ERROR: {{ error }}</span>
+        {% endfor %}
+    </p>
+
+</body>
